@@ -65,6 +65,8 @@ if ($search != "" && $type != "") {
         $whereclause .= " AND log like '%".$search."%'";
     else if ($type  == SEARCH_TYPE_CONTACT)
         $whereclause .= " AND contact like '%".$search."%'";
+    else if ($type == SEARCH_TYPE_USER_ID)
+        $whereclause .= " AND userid like '%".$search."%'";
     if ($version != "")
     	$whereclause .= " AND version = '".$version."'";
 } else if ($groupid == "") {

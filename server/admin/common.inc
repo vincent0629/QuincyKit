@@ -152,6 +152,7 @@ function show_search($text, $currenttype, $break = false, $style = "float: right
     echo '/>';
     if ($break) echo "<br/>";
     echo '<select name="type">';
+    add_option('User ID', SEARCH_TYPE_USER_ID, $currenttype);
     add_option('Contact', SEARCH_TYPE_CONTACT, $currenttype);
     add_option('ID', SEARCH_TYPE_ID, $currenttype);
     add_option('Description', SEARCH_TYPE_DESCRIPTION, $currenttype);
